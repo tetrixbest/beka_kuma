@@ -1,0 +1,432 @@
+@import url("@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto&family=Ubuntu:wght@300&display=swap');");
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.twitter__icon_img {
+  width: 40px;
+}
+
+.twitter__lenta {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  border-right: 1px solid #abaaaa;
+  border-left: 1px solid #abaaaa;
+  border-bottom: 1px solid #abaaaa;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 29.97%;
+}
+
+.search_users {
+  width: 30%;
+  margin: auto;
+  padding: 10px 22px;
+}
+
+.twitter__lenta_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  align-items: center;
+}
+
+.twitter__lenta_h2 {
+  /* font-family: ; */
+  margin-left: 2%;
+}
+
+.twitter__lenta_btn {
+  margin-right: 2%;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+}
+
+.twitter__lenta_btn:hover {
+  cursor: pointer;
+}
+
+.twitter__lenta_btn_bg {
+  width: 100%;
+}
+
+/* Стили модального окна */
+.modal {
+  display: none; /* По умолчанию модальное окно скрыто */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемнение заднего фона */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 13% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  border-radius: 10px;
+}
+.add_post_title {
+  font-size: 24px;
+  margin-bottom: 10%;
+}
+/* Стили инпутов */
+input {
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 5px;
+}
+
+/* Стили кнопки */
+.modal_btn {
+  padding: 10px 20px;
+  background-color: #3aa9f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.modal_btn:hover {
+  background-color: #3aa9f4;
+}
+.modal_options {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.add_post_btn {
+  padding: 10px 20px;
+  background-color: #3aa9f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.post {
+  width: 50%;
+  margin: auto;
+  margin-top: 4.9%;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+.posted {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 3%;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 13%; */
+
+}
+.user-info {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.post-title {
+  font-size: 16px;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+.post-info {
+  font-size: 16px;
+  margin-bottom: 2%;
+}
+.post-other {
+  font-size: 16px;
+  margin-bottom: 1%;
+}
+
+.post-posted {
+  font-size: 16px;
+  padding-top: 3px;
+}
+
+.post-image {
+  width: 100%;
+  /* max-width: 500px;
+  max-height: 500px; */
+  border-radius: 3%;
+}
+.post-options {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.post-buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.btn-edit {
+  padding: 10px 20px;
+  background-color: #3aa9f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-delete {
+  padding: 10px 20px;
+  background-color: #3aa9f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.edit_post_btn {
+  padding: 10px 20px;
+  background-color: #3aa9f4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.edit_post_title {
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+/* инпуты модального окна для добавления поста */
+.inp_add_post_title,
+.inp_add_post_info,
+.inp_add_post_other,
+.inp_add_post_image,
+.inp_edit_post_title,
+.inp_edit_post_info,
+.inp_edit_post_other,
+.inp_edit_post_image {
+  font-size: 18px;
+  padding: 4%;
+  border-radius: 10px;
+}
+/* инпуты модального окна для добавления поста */
+
+/* пагинация */
+.pagination {
+  display: flex;
+  list-style-type: none;
+  width: 30%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.pagination-list {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.page_num {
+  width: 15%;
+  justify-content: center;
+}
+
+.page-item {
+  background-color: #3aa9f4;
+  padding: 0% 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.page-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.pagcon {
+  margin-top: 3%;
+  margin-bottom: 20px;
+}
+/* пагинация */
+
+/* hurt */
+  /* Стили кнопки */
+ 
+  .hurts{
+    position: relative;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+  }
+  .hurt-count{
+    margin-top: 67%;
+
+  }
+.hart{
+  margin-top: 60%;
+}
+.comment{
+  margin-top: 60%;
+}
+.lik{
+  display: flex;
+}
+.comm{
+  display: flex;
+}
+
+@media (max-width: 1500px) {
+  .post-buttons {
+    width: 33%;
+  }
+  .user-info {
+    width: 30%;
+  }
+}
+@media (max-width: 1350px) {
+  .post-buttons {
+    width: 40%;
+  }
+}
+@media (max-width: 1150px) {
+  .container {
+    width: 80%;
+  }
+  .twitter__lenta {
+    width: 80%;
+    top: 0;
+    left: 10%;
+  }
+  .post {
+    width: 100%;
+  }
+  .pagination {
+    width: 35%;
+  }
+  .pagination-list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+  .twitter__lenta {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .post {
+    width: 100%;
+    margin-top: 7%;
+  }
+  .user-info {
+    width: 35%;
+    margin-top: 5%;
+  }
+  .pagination {
+    width: 40%;
+  }
+  .pagination-list {
+    width: 100%;
+  }
+  .post-buttons {
+    width: 20%;
+  }
+
+  @media (max-width: 850px) {
+    .post-buttons {
+      width: 27%;
+    }
+  }
+  @media (max-width: 700px) {
+    .post-buttons {
+      width: 30%;
+    }
+    .pagination {
+      width: 60%;
+    }
+    .pagination-list {
+      width: 100%;
+    }
+    .user-info {
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .post-buttons {
+    width: 35%;
+  }
+  .pagination {
+    width: 80%;
+  }
+  .pagination-list {
+    width: 100%;
+  }
+  .user-info {
+    
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-buttons {
+    width: 40%;
+  }
+}
+
+@media (max-width: 450px) {
+  .post-buttons {
+    width: 45%;
+  }
+  .user-info {
+    
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 390px) {
+  .post-buttons {
+    width: 55%;
+  }
+  .user-info {
+    
+    margin-top: 17%;
+  }
+}
+
+@media (max-width: 390px) {
+  .user-info {
+    
+    margin-top: 20%;
+  }
+}

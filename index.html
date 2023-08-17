@@ -2,10 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Kuma loh</h1>
+    <div class="container">
+      <div class="block">
+        <section class="block__item block-item">
+          <h2 class="block-item_title">У вас уже есть аккаунт?</h2>
+          <button class="block-item_btn signin-btn">войти</button>
+        </section>
+        <section class="block__item block-item">
+          <h2 class="block-item_title">У вас нет аккаунта?</h2>
+          <button class="block-item_btn singup-btn">Зарегистрироваться</button>
+        </section>
+      </div>
+      <div class="form-box">
+        <form action="#" class="form form_signin">
+            <img style="width: 40px;" src="../img/twitter.png" alt="">
+
+          <h3 class="form__title">Вход</h3>
+          <p>
+            <input
+              type="text"
+              class="form__input signin_login"
+              placeholder="Логин"
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              class="form__input signin_password"
+              placeholder="password"
+            />
+          </p>
+          <p>
+            <button class="form__btn signin_btn">Войти</button>
+              <p>
+                <a
+                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  class="form__fogot"
+                  >Восстановить пароль</a
+                >
+              </p>
+            </a>
+          </p>
+        </form>
+
+        <form action="#" class="form form_signup">
+            <img style="width: 40px;" src="../img/twitter.png" alt="">
+          <h3 class="form__title signup_title">Регистрация</h3>
+          <p>
+            <input
+              type="text"
+              class="form__input signup_inp_login"
+              placeholder="Логин"
+            />
+          </p>
+          <p>
+            <input
+              type="email"
+              class="form__input signup_inp_email"
+              placeholder="Email"
+            />
+          </p>
+
+          <p>
+            <input
+              type="password"
+              class="form__input signup_inp_password"
+              placeholder="password"
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              class="form__input signup_inp_password2"
+              placeholder="Потвердите Пароль"
+            />
+          </p>
+          <p>
+            <button  class="form__btn form__btn_signup signup_btn">
+              Зарегистрироваться
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js" defer></script>
   </body>
 </html>

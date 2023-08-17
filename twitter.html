@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./twitter.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="twitter__lenta">
+        <div class="twitter__lenta_title">
+          <img
+            style="width: 40px; margin: 10px"
+            src="./twitter.png"
+            alt=""
+          />
+          <h2 class="twitter__lenta_h2">Лента</h2>
+          <input
+            type="text"
+            placeholder=" Search users..."
+            class="search_users"
+          />
+          <!-- todo Модальное окно для создания поста -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <h3 class="add_post_title">Создать Пост</h3>
+              <!-- Инпуты -->
+              <input
+                type="text"
+                placeholder="Заголовок"
+                class="inp_add_post_title"
+              />
+              <input
+                type="text"
+                placeholder="Информация поста"
+                class="inp_add_post_info"
+              />
+              <input
+                type="text"
+                placeholder="Доп Информация"
+                class="inp_add_post_other"
+              />
+              <input
+                type="url"
+                placeholder="Изображение"
+                class="inp_add_post_image"
+              />
+
+              <!-- Кнопка закрытия модального окна -->
+              <div class="modal_options">
+                <button onclick="closeModal()" class="modal_btn">
+                  Закрыть
+                </button>
+                <button class="add_post_btn">Создать Пост</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Todo Модальное окно для изменения Поста -->
+          <div id="myModalEdit" class="modal">
+            <div class="modal-content">
+              <h3 class="edit_post_title">Изменить Пост</h3>
+              <!-- Инпуты -->
+              <input
+                type="text"
+                placeholder="Заголовок"
+                class="inp_edit_post_title"
+              />
+              <input
+                type="text"
+                placeholder="Информация поста"
+                class="inp_edit_post_info"
+              />
+              <input
+                type="text"
+                placeholder="Доп Информация"
+                class="inp_edit_post_other"
+              />
+              <input
+                type="url"
+                placeholder="Изображение"
+                class="inp_edit_post_image"
+              />
+
+              <!-- Кнопка закрытия модального окна -->
+              <div class="modal_options">
+                <button onclick="closeModalEdit()" class="modal_btn">
+                  Закрыть
+                </button>
+                <button class="edit_post_btn">Сохранить Изменения</button>
+              </div>
+            </div>
+          </div>
+          <button class="twitter__lenta_btn" onclick="openModal()">
+            <img src="./plus.png" alt="" class="twitter__lenta_btn_bg" />
+          </button>
+        </div>
+      </div>
+     
+      <div class="post"></div>
+
+      <nav class="pagcon" aria-label="...">
+        <ul class="pagination">
+          <li class="page-item prev">
+            <a class="page-link" href="#">Previous</a>
+          </li>
+          <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+          <div class="pagination-list"></div>
+          <li class="page-item next">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="./ post.js"></script>
+  </body>
+</html>
